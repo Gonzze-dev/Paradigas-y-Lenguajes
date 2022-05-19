@@ -1,0 +1,7 @@
+infraccion1 := project dni, patente (infraccion);
+vehiculos1 := project dni, patente (vehiculo);
+
+diff_infra_vehi := infraccion1 difference vehiculos1;
+
+njoin_persona := diff_infra_vehi njoin persona;
+pro_persona := project nombre (njoin_persona);
