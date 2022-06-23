@@ -1,0 +1,17 @@
+e-clausura {i} = {i,10,8,6,0,3,9,11,12,15,16,f} -> A
+mueve(A, a) {17, 4} e-clausura({17,4}) = {17,4,16,f} -> B
+mueve(A, b) {13, 1} e-clausura ({13, 1}) = ({13,1,12,10,11,8,6,0,3,9,15,16,f}) -> C
+mueve(B, a) {17} e-clausura({17}) = {17, 16, f} -> D
+mueve(B, b) {5} e-clausura({5}) = {5,7,6,0,3,9,12,10,11,8,15,16,f} -> E
+mueve(C,a) {2,4,17} e-clausura({2,4,17}) = {2,4,3,17,16,f,7,6,0,9,12,10,11,8,15} -> F
+mueve(C,b) {13,1} -> C
+mueve(D, a) {17} -> D
+mueve(D, b) {} e-clausura({}) -> M
+mueve(E, a) {4, 17} -> B
+mueve(E, b) {13, 1} -> C
+mueve(F, a) {4, 17} -> B
+mueve(F, b) {5,1,13} e-clausura{5,1,13,7,6,0,3,12,10,11,8,9,15,16,f} -> G
+mueve(G,a) {2,4,17} -> F
+mueve(G,b) {1,13} -> C
+mueve(M,a) -> M
+mueve(M,b) -> M
